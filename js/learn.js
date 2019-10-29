@@ -23,7 +23,7 @@ function validate_this(form, id) {
   card = cards.find( c => c.id == id);
 
   input = form.querySelector(".reply");
-  if (input.value === card["lang2"]) {
+  if (input.value.trim() === card["lang2"].trim()) {
     onActionRight();
     if(!last_wrong){
       if(!card["count"]){
