@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   for(let i = 0;i<100; i++){
     cardContainer.innerHTML += formContent;
   }
-  window.setTimeout(init,1000);
+  window.setTimeout(init,1);
 
 });
 
