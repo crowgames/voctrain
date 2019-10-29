@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+  your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<div id="stacked-cards-block" class="stackedcards stackedcards--animatable init">
+  <div id="stackedcards-container" class="stackedcards-container">
+
+  </div>
+  <div class="stackedcards--animatable stackedcards-overlay top">TOP</div>
+  <div class="stackedcards--animatable stackedcards-overlay right">RIGHT</div>
+  <div class="stackedcards--animatable stackedcards-overlay left">LEFT</div>
+</div>
+<div class="global-actions"  style="display: none;">
+  <div class="left-action">Left</div>
+  <div class="top-action">Top</div>
+  <div class="right-action">Right</div>
+</div>
+
+<div id="card-template" style="display: none;">
+  <span style="position: absolute; top: 1em; right: 1em; width: 40px; height: 40px; border-radius: 100%; border: 2px solid #ccc; text-align: center;">
+    <span style="position: relative; top: 6px; color: #ccc;">{{count}}</span>
+  </span>
+  <form action="javascript:" onSubmit="validate_this(this, '{{id}}')">
+    <p>{{lang1}} <span class="rightAnswer">{{lang2}}</span></p>
+
+    <input type="text" class="reply replyInput"/><br><br>
+    <button>check</button>
+  </form>
+</div>
+
+<div style="position: fixed; bottom: 0px; left: 0px; width: 100%; text-align: center;">
+<a href="create_voc.html">create new vocabulary</a>
+</div>
+<script type="text/javascript" src="js/stack.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/learn.js"></script>
+<script type="text/javascript" src="js/service-worker.js"></script>
+</body>
+
+</html>
